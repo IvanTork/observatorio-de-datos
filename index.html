@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Orientador de ayuda en cuidados</title>
+<title>Orientador de cuidados CDMX</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 --bg:#fbf6ef;--card:#fffdfa;--tx:#2b2521;--mut:#6f665d;--ac:#c2512f;--ac2:#e39a5b;--acbg:#f8e6dc;--bd:#eadfd1;--ok:#2f7152;--sh:0 6px 24px rgba(120,70,40,.08)}
@@ -11,63 +11,62 @@
 :root[data-theme="dark"]{--bg:#171412;--card:#221e1b;--tx:#f3ede6;--mut:#aca297;--ac:#ee8a6b;--ac2:#d9a066;--acbg:#3a2722;--bd:#363029;--ok:#7fcba3;--sh:0 6px 24px rgba(0,0,0,.35)}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;overflow-x:hidden}
-.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.35;z-index:0;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
-.b1{width:340px;height:340px;background:var(--ac2);top:-90px;right:-80px}
-.b2{width:300px;height:300px;background:var(--ac);bottom:-100px;left:-90px;animation-delay:-6s;opacity:.22}
-@keyframes float{to{transform:translate(30px,40px) scale(1.12)}}
-main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:28px 16px 56px}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
-h1{font-size:clamp(1.9rem,6vw,2.7rem);margin-bottom:12px}
-.lead{color:var(--mut);margin:0 0 22px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.3;z-index:0;pointer-events:none;animation:fl 14s ease-in-out infinite alternate}
+.b1{width:320px;height:320px;background:var(--ac2);top:-90px;right:-80px}
+.b2{width:280px;height:280px;background:var(--ac);bottom:-90px;left:-80px;animation-delay:-6s;opacity:.2}
+@keyframes fl{to{transform:translate(30px,40px) scale(1.12)}}
+main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:26px 16px 56px}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.2;margin:0}
+h1{font-size:clamp(1.8rem,6vw,2.6rem);margin-bottom:12px}
 .screen{animation:in .5s cubic-bezier(.2,.8,.2,1) both}
 @keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:var(--sh)}
-.hero{padding:28px 22px}
-.badge{display:inline-flex;gap:6px;align-items:center;background:var(--acbg);color:var(--ac);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:99px;margin-bottom:14px}
-.priv{display:grid;gap:12px;margin:18px 0 22px}
-.priv div{display:flex;gap:12px;align-items:flex-start;font-size:.93rem}
-.priv span{flex:none;width:34px;height:34px;border-radius:10px;background:var(--acbg);display:grid;place-items:center;font-size:1.05rem}
-.priv b{display:block}
-.track{height:6px;border-radius:99px;background:var(--bd);margin:0 0 6px;overflow:hidden}
-.track i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:99px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.badge{display:inline-block;background:var(--acbg);color:var(--ac);font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:99px;margin-bottom:12px}
+.priv{display:grid;gap:12px;margin:16px 0 20px;font-size:.93rem}
+.priv p{margin:0}
+.track{height:6px;border-radius:99px;background:var(--bd);overflow:hidden;margin-bottom:6px}
+.track i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:width .6s cubic-bezier(.2,.8,.2,1)}
 .stepl{font-size:.8rem;color:var(--mut);margin-bottom:14px}
-h2{font-size:1.35rem;margin-bottom:4px}
-.hint{color:var(--mut);font-size:.9rem;margin:0 0 16px}
-.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px}
-.opt{border:1.5px solid var(--bd);border-radius:14px;padding:14px;cursor:pointer;background:var(--bg);color:var(--tx);text-align:left;font:inherit;font-size:.93rem;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s;position:relative}
-.opt:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--ac2)}
-.opt b{display:block;margin-bottom:2px}
-.opt small{color:var(--mut)}
+h2{font-size:1.3rem;margin-bottom:4px}
+.hint{color:var(--mut);font-size:.9rem;margin:0 0 14px}
+.q{margin-bottom:22px}
+.q h3{font-family:system-ui,sans-serif;font-size:.98rem;font-weight:650;margin-bottom:8px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}
+.opt{border:1.5px solid var(--bd);border-radius:13px;padding:12px 14px;cursor:pointer;background:var(--bg);color:var(--tx);text-align:left;font:inherit;font-size:.92rem;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s;position:relative}
+.opt:hover{transform:translateY(-2px);box-shadow:var(--sh);border-color:var(--ac2)}
+.opt small{display:block;color:var(--mut)}
 .opt[aria-pressed="true"]{border-color:var(--ac);background:var(--acbg)}
-.opt[aria-pressed="true"]::after{content:"✓";position:absolute;top:10px;right:12px;color:var(--ac);font-weight:700}
-.extra{overflow:hidden;max-height:0;opacity:0;transition:max-height .45s ease,opacity .35s,margin .35s}
+.opt[aria-pressed="true"]::after{content:"✓";position:absolute;top:9px;right:12px;color:var(--ac);font-weight:700}
+.extra{overflow:hidden;max-height:0;opacity:0;transition:max-height .45s,opacity .35s}
 .extra.show{max-height:220px;opacity:1;margin-top:12px}
 label.f{display:block;font-size:.85rem;font-weight:600;margin:16px 0 6px}
-textarea,input[type=text]{width:100%;font:inherit;font-size:.93rem;padding:11px 13px;border:1.5px solid var(--bd);border-radius:12px;background:var(--bg);color:var(--tx);transition:border-color .2s,box-shadow .2s}
-textarea{min-height:72px;resize:vertical}
-textarea:focus,input:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px var(--acbg)}
-.nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+textarea,select{width:100%;font:inherit;font-size:.93rem;padding:11px 13px;border:1.5px solid var(--bd);border-radius:12px;background:var(--bg);color:var(--tx)}
+textarea{min-height:70px;resize:vertical}
+textarea:focus,select:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px var(--acbg)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
 button.p,button.s{font:inherit;font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:12px;cursor:pointer;border:1.5px solid var(--ac);transition:transform .15s,box-shadow .2s,opacity .2s}
 button.p{background:linear-gradient(135deg,var(--ac),var(--ac2));border-color:transparent;color:#fff}
 button.p:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 20px rgba(194,81,47,.3)}
 button.p:disabled{opacity:.4;cursor:not-allowed}
 button.s{background:transparent;color:var(--ac)}
 button.s:hover{background:var(--acbg)}
-.summary{font-size:.88rem;color:var(--mut)}
-.res{border-left:5px solid var(--ac);animation:in .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*90ms)}
+.prof{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-size:.78rem;background:var(--acbg);color:var(--ac);padding:3px 10px;border-radius:99px}
+.basket{display:grid;gap:8px;margin-top:10px}
+.basket div{display:flex;gap:10px;align-items:center;font-size:.92rem;border:1.5px solid var(--bd);border-radius:12px;padding:10px 12px;background:var(--bg)}
+.basket b{flex:none;min-width:118px;color:var(--ac)}
+.res{position:relative;border-left:5px solid var(--ac);animation:in .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*80ms)}
 .res.alt{border-left-color:var(--ac2)}
-.res h3{font-size:1.12rem;margin:0 0 6px;padding-right:90px}
-.score{position:absolute;right:18px;top:18px;background:var(--ok);color:#fff;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:99px}
-.res{position:relative}
-.tag{display:inline-block;font-size:.75rem;background:var(--acbg);color:var(--ac);padding:2px 10px;border-radius:99px;margin-bottom:8px}
+.res h3{font-size:1.1rem;margin-bottom:6px;padding-right:60px}
+.score{position:absolute;right:16px;top:16px;background:var(--ok);color:#fff;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:99px}
 .why{color:var(--mut);font-size:.86rem;margin:8px 0 12px}
 .links{display:flex;flex-wrap:wrap;gap:8px}
-.links a{font-size:.88rem;font-weight:600;text-decoration:none;color:var(--ac);border:1.5px solid var(--bd);padding:7px 14px;border-radius:10px;transition:background .2s,border-color .2s}
-.links a:hover{background:var(--acbg);border-color:var(--ac)}
-.sec{font-family:Georgia,serif;font-size:1.05rem;margin:24px 0 10px}
+.links a{font-size:.88rem;font-weight:600;text-decoration:none;color:var(--ac);border:1.5px solid var(--bd);padding:7px 14px;border-radius:10px;transition:background .2s}
+.links a:hover{background:var(--acbg)}
+.sec{font-family:Georgia,serif;font-size:1.05rem;margin:22px 0 10px}
 .info{background:var(--acbg);border-radius:14px;padding:14px 16px;font-size:.9rem;margin-bottom:16px}
-.note{font-size:.8rem;color:var(--mut);border-top:1px solid var(--bd);padding-top:14px;margin-top:28px}
+.note{font-size:.8rem;color:var(--mut);border-top:1px solid var(--bd);padding-top:14px;margin-top:26px}
 .note a{color:var(--ac)}
 @media (prefers-reduced-motion:reduce){*,.blob{animation:none!important;transition:none!important}}
 </style>
@@ -77,114 +76,128 @@ button.s:hover{background:var(--acbg)}
 <main>
 <div id="track" style="display:none"><div class="track"><i id="bar"></i></div><div class="stepl" id="stepl"></div></div>
 <div id="app"></div>
-<p class="note">Referencia metodológica: <a href="https://www.inegi.org.mx/programas/enasic/2022/" target="_blank" rel="noopener">ENASIC (INEGI)</a> y <a href="https://www.inegi.org.mx/temas/tnrh/" target="_blank" rel="noopener">CSTNRHM (INEGI)</a>. Esta herramienta orienta y no garantiza elegibilidad: requisitos, montos y vigencia de los programas cambian, confirma siempre en el sitio oficial.</p>
+<p class="note">Referencia: <a href="https://www.inegi.org.mx/programas/enasic/2022/" target="_blank" rel="noopener">ENASIC</a> y <a href="https://www.inegi.org.mx/temas/tnrh/" target="_blank" rel="noopener">CSTNRHM</a> (INEGI). Esta herramienta orienta y no garantiza elegibilidad: requisitos, montos y vigencia cambian, confirma en el sitio oficial. Cobertura: Ciudad de México.</p>
 </main>
 <script>
+const o=(id,t,tags=[],h)=>({id,t,tags,h});
 const GROUPS=[
- {id:"infancia",t:"Primera infancia (0 a 5 años)",d:"Niñas y niños que requieren cuidado constante"},
- {id:"ninez",t:"Niñez y adolescencia (6 a 17 años)",d:"Cuidado después de la escuela, educación"},
- {id:"mayores",t:"Personas mayores (60+)",d:"Con o sin dependencia"},
- {id:"discapacidad",t:"Persona con discapacidad",d:"Cualquier edad"},
- {id:"enfermedad",t:"Enfermedad o dependencia temporal",d:"Recuperación, enfermedad crónica, cuidados paliativos"},
- {id:"cuidadora",t:"Soy quien cuida",d:"Necesito apoyo para mí: descanso, ingresos, capacitación"},
- {id:"otro",t:"Otro / no encuentro mi grupo",d:"Cuéntanos tu caso con tus palabras"}
+ {id:"ama",t:"Ama de casa o persona que se dedica al hogar",d:"Cuido de mi familia en casa",pg:"cuidadora"},
+ {id:"trab",t:"Persona que trabaja y también cuida",d:"Combino empleo y cuidados",pg:"cuidadora"},
+ {id:"infancia",t:"Primera infancia (0 a 5 años)",d:"Una niña o niño pequeño necesita cuidado",pg:"infancia"},
+ {id:"ninez",t:"Niñez y adolescencia (6 a 17 años)",d:"Escuela, tiempo después de clases",pg:"ninez"},
+ {id:"mayores",t:"Persona mayor (60+)",d:"Con o sin dependencia",pg:"mayores"},
+ {id:"discapacidad",t:"Persona con discapacidad",d:"Cualquier edad",pg:"discapacidad"},
+ {id:"enfermedad",t:"Enfermedad o dependencia temporal",d:"Crónica, recuperación o paliativos",pg:"enfermedad"},
+ {id:"otro",t:"Otro / no encuentro mi grupo",d:"Cuéntanos tu caso con tus palabras",pg:null}
 ];
 const NEEDS=[
  {id:"economico",t:"Apoyo económico",d:"Pensión, beca o transferencia"},
  {id:"diario",t:"Cuidado diario",d:"Guardería, estancia, centro de día"},
- {id:"salud",t:"Salud y atención médica",d:"Consultas, medicamentos, rehabilitación"},
+ {id:"salud",t:"Salud y atención médica",d:"Consultas, medicinas, rehabilitación"},
  {id:"descanso",t:"Descanso para quien cuida",d:"Relevo, talleres, apoyo emocional"},
- {id:"educacion",t:"Educación y capacitación",d:"Becas, formación, empleo"},
- {id:"legal",t:"Orientación y derechos",d:"Trámites, asesoría jurídica, credenciales"}
+ {id:"educacion",t:"Educación, capacitación o empleo",d:"Becas, cursos, bolsa de trabajo"},
+ {id:"legal",t:"Orientación y derechos",d:"Trámites, asesoría, credenciales"}
 ];
-const CONDS=[
- {id:"sinss",t:"Sin seguridad social",d:"No tengo IMSS, ISSSTE u otro servicio por empleo"},
- {id:"bajo",t:"Ingresos bajos",d:"El ingreso del hogar no alcanza para cuidados"},
- {id:"unica",t:"Soy la única persona que cuida",d:"No tengo con quién repartir el cuidado"},
- {id:"trabajo",t:"Trabajo o busco empleo",d:"Necesito que el cuidado me deje trabajar"},
- {id:"cdmx",t:"Vivo en Ciudad de México",d:"Para mostrar programas locales"}
-];
-const GK={infancia:/beb[eé]|lactante|reci[eé]n nacid|guarder|preescolar/i,ninez:/ni[ñn][oa]|adolescent|escuela|hij[oa]/i,mayores:/abuel|mayor|anciano|vejez/i,discapacidad:/discapac|silla de ruedas|autis|ceguera|sord|par[aá]lisis/i,enfermedad:/enferm|c[aá]ncer|diabet|di[aá]lisis|terminal|paliativ|operaci/i,cuidadora:/cuid/i};
-const NK={economico:/dinero|econ[oó]m|pensi|beca|ingreso|gasto/i,diario:/guarder|estancia|cuidar|centro de d/i,salud:/m[eé]dic|salud|medicin|terapia|rehabilit|psic/i,descanso:/descans|cansad|estr[eé]s|respiro|emocional/i,educacion:/escuel|estudi|capacit|curso|emple|trabaj/i,legal:/legal|abogad|tr[aá]mite|derech|credencial|document/i};
+const NH={cuidadora:["economico","diario","descanso","educacion","salud","legal"],infancia:["diario","salud","economico","legal"],ninez:["economico","educacion","diario","salud"],mayores:["economico","salud","diario","descanso","legal"],discapacidad:["economico","salud","diario","educacion","legal"],enfermedad:["salud","economico","diario","descanso"]};
+const ALC=["Álvaro Obregón","Azcapotzalco","Benito Juárez","Coyoacán","Cuajimalpa","Cuauhtémoc","Gustavo A. Madero","Iztacalco","Iztapalapa","Magdalena Contreras","Miguel Hidalgo","Milpa Alta","Tláhuac","Tlalpan","Venustiano Carranza","Xochimilco"];
+// Ramificaciones: preguntas distintas según el grupo elegido
+const HRS={k:"h",q:"¿Cuántas horas al día dedicas al cuidado de otras personas?",o:[o("a","Menos de 2",[],1),o("b","2 a 5",[],3.5),o("c","6 a 10",["carga"],8),o("d","Más de 10",["carga"],12)]};
+const WHO={k:"who",q:"¿A quién cuidas? (puedes elegir varios)",m:1,o:[o("i","Hijas/os de 0 a 5 años",["g:infancia"]),o("n","Hijas/os de 6 a 17 años",["g:ninez"]),o("m","Persona mayor",["g:mayores"]),o("d","Persona con discapacidad",["g:discapacidad"]),o("e","Persona enferma",["g:enfermedad"])]};
+const DEP={k:"dep",q:"¿Cuánta ayuda necesita en su día a día?",o:[o("a","Se vale por sí misma/o"),o("b","Apoyo parcial",["dep_media"]),o("c","Ayuda constante",["dep_alta"])]};
+const BR={
+ ama:[HRS,WHO,{k:"ay",q:"¿Alguien más comparte el cuidado contigo?",o:[o("s","Sí, lo compartimos"),o("n","No, lo hago sola/o",["unica"])]},{k:"meta",q:"¿Qué te gustaría hacer con más tiempo libre?",m:1,o:[o("t","Generar ingresos propios",["quiere_trabajo"]),o("e","Estudiar o capacitarme",["quiere_estudiar"]),o("d","Descansar y cuidar mi salud",["quiere_descanso"])]}],
+ trab:[HRS,WHO,{k:"sit",q:"¿Cuál es tu situación laboral?",o:[o("f","Empleo formal con IMSS",["trabajo"]),o("i","Empleo informal, sin prestaciones",["trabajo","sinss"]),o("b","Busco empleo",["trabajo","desempleo"]),o("r","Reduje o dejé mi trabajo por cuidar",["trabajo","costo_op"])]},{k:"ay",q:"¿Alguien más comparte el cuidado contigo?",o:[o("s","Sí"),o("n","No, lo hago sola/o",["unica"])]}],
+ infancia:[{k:"ed",q:"¿Qué edad tiene?",o:[o("a","Menos de 1 año"),o("b","1 a 3 años"),o("c","4 a 5 años")]},{k:"quien",q:"¿Quién la/lo cuida durante el día?",o:[o("m","Madre o padre en casa"),o("f","Un familiar"),o("p","Pago a alguien",["bajo"]),o("n","No tengo con quién dejarla/o",["unica"])]},{k:"tr",q:"¿Su madre o padre trabaja o busca empleo?",o:[o("s","Sí",["trabajo"]),o("n","No")]},{k:"ss",q:"¿Tiene seguridad social (IMSS, ISSSTE)?",o:[o("s","Sí"),o("n","No",["sinss"])]}],
+ ninez:[{k:"esc",q:"¿Cómo va con la escuela?",o:[o("s","Asiste con regularidad"),o("r","Está en riesgo de dejarla",["escuela_riesgo","bajo"]),o("n","No asiste",["escuela_riesgo"])]},{k:"desp",q:"¿Quién la/lo cuida después de clases?",o:[o("f","Un familiar"),o("s","Se queda sola/o",["unica"]),o("o","Alguien externo",["bajo"])]},{k:"tr",q:"¿Su madre o padre trabaja o busca empleo?",o:[o("s","Sí",["trabajo"]),o("n","No")]}],
+ mayores:[DEP,{k:"viv",q:"¿Con quién vive?",o:[o("f","Con familia"),o("s","Sola/o",["solo"])]},{k:"pen",q:"¿Recibe alguna pensión?",o:[o("s","Sí"),o("n","No",["bajo"])]}],
+ discapacidad:[{k:"tipo",q:"¿Qué tipo de discapacidad?",o:[o("m","Motriz"),o("s","Visual o auditiva"),o("i","Intelectual o psicosocial")]},{k:"cert",q:"¿Cuenta con certificado o credencial de discapacidad?",o:[o("s","Sí"),o("n","No",["sin_cert"])]},DEP],
+ enfermedad:[{k:"tipo",q:"¿Qué situación describe mejor el caso?",o:[o("c","Enfermedad crónica"),o("r","Recuperación temporal"),o("p","Cuidados paliativos",["dep_alta"])]},{k:"aten",q:"¿Tiene atención médica regular?",o:[o("s","Sí"),o("n","No",["sinss"])]},DEP],
+ otro:[]
+};
+const GK={infancia:/beb[eé]|lactante|preescolar/i,ninez:/ni[ñn][oa]|adolescent|escuela/i,mayores:/abuel|mayor|anciano/i,discapacidad:/discapac|silla de ruedas|autis|sord|ceguera/i,enfermedad:/enferm|c[aá]ncer|diabet|di[aá]lisis|terminal|operaci/i,cuidadora:/cuid|hogar|mam[aá]|pap[aá]/i};
+const NK={economico:/dinero|econ[oó]m|pensi|beca|ingreso|gasto/i,diario:/guarder|estancia|cuidar/i,salud:/m[eé]dic|salud|medicin|terapia|rehabilit|psic/i,descanso:/descans|cansad|estr[eé]s|respiro/i,educacion:/escuel|estudi|capacit|curso|emple|trabaj/i,legal:/legal|abogad|tr[aá]mite|derech|credencial/i};
 const ALL=["infancia","ninez","mayores","discapacidad","enfermedad","cuidadora"];
-// q = término para buscar lugares cercanos en el mapa
+const CD="https://www.cdmx.gob.mx";
 const PROGS=[
- {n:"Pensión Bienestar de las Personas Adultas Mayores",o:"Secretaría de Bienestar",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["mayores"],nd:["economico"],c:["bajo","sinss"],x:"Apoyo económico bimestral para personas adultas mayores."},
- {n:"Pensión Mujeres Bienestar",o:"Secretaría de Bienestar",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["cuidadora","mayores"],nd:["economico"],c:["bajo","unica","sinss"],x:"Apoyo económico para mujeres en el rango de edad de sus reglas de operación; reconoce la carga de cuidados no remunerados."},
- {n:"Pensión para el Bienestar de las Personas con Discapacidad",o:"Secretaría de Bienestar",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["discapacidad"],nd:["economico"],c:["bajo","sinss"],x:"Apoyo económico para personas con discapacidad permanente."},
- {n:"Becas Benito Juárez",o:"Coordinación Nacional de Becas",u:"https://www.gob.mx/becasbenitojuarez",q:"escuela pública",g:["ninez"],nd:["economico","educacion"],c:["bajo"],x:"Becas para sostener la permanencia escolar en distintos niveles."},
- {n:"Guarderías y estancias del IMSS",o:"IMSS",u:"https://www.imss.gob.mx",q:"guardería IMSS",g:["infancia","cuidadora"],nd:["diario"],c:["trabajo"],x:"Cuidado infantil para personas aseguradas que trabajan."},
- {n:"Servicios de asistencia social y cuidado del DIF",o:"Sistema Nacional DIF",u:"https://www.gob.mx/difnacional",q:"DIF",g:ALL,nd:["diario","salud","legal","descanso"],c:["bajo","sinss"],x:"Centros de atención, rehabilitación, orientación jurídica y asistencia para población vulnerable. Consulta tu DIF municipal o estatal."},
- {n:"INAPAM: credencial y servicios",o:"INAPAM",u:"https://www.gob.mx/inapam",q:"INAPAM",g:["mayores"],nd:["salud","legal","descanso","economico"],c:["bajo"],x:"Credencial con descuentos, atención y actividades para personas mayores."},
- {n:"IMSS-Bienestar",o:"IMSS-Bienestar",u:"https://www.imss.gob.mx",q:"centro de salud",g:ALL,nd:["salud"],c:["sinss"],x:"Atención médica gratuita para personas sin seguridad social."},
- {n:"Manzanas del Cuidado y Utopías (CDMX)",o:"Gobierno de la Ciudad de México",u:"https://www.cdmx.gob.mx",q:"Manzana del Cuidado",g:["cuidadora","infancia","mayores","discapacidad","enfermedad"],nd:["diario","descanso","educacion","salud"],c:["unica","trabajo","cdmx"],cdmx:true,x:"Espacios locales con servicios de cuidado, talleres y capacitación para quienes cuidan."},
- {n:"Apoyo a cuidadoras en tu estado o municipio",o:"Gobiernos estatales y municipales",u:"https://www.gob.mx/difnacional",q:"Instituto de las Mujeres",g:["cuidadora"],nd:["descanso","educacion","legal"],c:["unica","bajo"],x:"Muchos estados ofrecen talleres, relevo y atención psicológica. Pregunta en tu DIF o Instituto de las Mujeres."}
+ {n:"Pensión Bienestar de las Personas Adultas Mayores",o:"Secretaría de Bienestar (federal)",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["mayores"],nd:["economico"],c:["bajo","sinss","solo"],x:"Apoyo económico bimestral para personas adultas mayores."},
+ {n:"Pensión Mujeres Bienestar",o:"Secretaría de Bienestar (federal)",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["cuidadora"],nd:["economico"],c:["bajo","unica","carga","sinss"],x:"Apoyo económico para mujeres dentro del rango de edad de sus reglas de operación; reconoce la carga de cuidados."},
+ {n:"Pensión para el Bienestar de Personas con Discapacidad",o:"Secretaría de Bienestar (federal)",u:"https://www.gob.mx/bienestar",q:"Secretaría de Bienestar módulo",g:["discapacidad"],nd:["economico"],c:["bajo","sin_cert","dep_alta","sinss"],x:"Apoyo económico para personas con discapacidad permanente."},
+ {n:"Becas Benito Juárez",o:"Coordinación Nacional de Becas",u:"https://www.gob.mx/becasbenitojuarez",q:"escuela pública",g:["ninez"],nd:["economico","educacion"],c:["bajo","escuela_riesgo"],x:"Becas para sostener la permanencia escolar."},
+ {n:"Guarderías y estancias del IMSS",o:"IMSS",u:"https://www.imss.gob.mx",q:"guardería IMSS",g:["infancia","cuidadora"],nd:["diario"],c:["trabajo","unica","costo_op"],x:"Cuidado infantil para personas aseguradas que trabajan."},
+ {n:"DIF de la Ciudad de México",o:"DIF CDMX",u:"https://dif.cdmx.gob.mx/",q:"DIF",g:ALL,nd:["diario","salud","legal","descanso"],c:["bajo","sinss","dep_alta","unica"],x:"Centros de atención, rehabilitación y orientación jurídica para población vulnerable."},
+ {n:"Programas sociales de la Ciudad (SIBISO)",o:"Secretaría de Inclusión y Bienestar Social CDMX",u:"https://sibiso.cdmx.gob.mx/",q:"SIBISO",g:ALL,nd:["economico","legal"],c:["bajo","solo","sin_cert"],x:"Catálogo de apoyos de la Ciudad. Revisa convocatorias vigentes para tu grupo."},
+ {n:"INAPAM: credencial y servicios",o:"INAPAM",u:"https://www.gob.mx/inapam",q:"INAPAM",g:["mayores"],nd:["salud","legal","descanso","economico"],c:["bajo","solo"],x:"Credencial con descuentos, atención y actividades para personas mayores."},
+ {n:"Centros de salud de la Ciudad",o:"Servicios de salud CDMX",u:CD,q:"centro de salud",g:ALL,nd:["salud"],c:["sinss","dep_media","dep_alta"],x:"Consulta, vacunación y atención primaria para quienes no tienen seguridad social."},
+ {n:"Manzanas del Cuidado y Utopías",o:"Gobierno de la Ciudad de México",u:CD,q:"Manzana del Cuidado",g:["cuidadora","infancia","mayores","discapacidad","enfermedad"],nd:["diario","descanso","educacion","salud"],c:["unica","trabajo","carga","quiere_descanso","quiere_estudiar","dep_alta"],x:"Espacios locales con servicios de cuidado, talleres y capacitación para quienes cuidan."},
+ {n:"Capacitación y empleo (STyFE CDMX)",o:"Secretaría de Trabajo y Fomento al Empleo",u:CD,q:"Secretaría de Trabajo y Fomento al Empleo",g:["cuidadora"],nd:["educacion"],c:["quiere_trabajo","quiere_estudiar","desempleo","costo_op"],x:"Cursos, vinculación laboral y apoyos para reincorporarte al empleo o generar ingresos."}
 ];
-const S={step:-1,g:null,gt:"",n:new Set(),nt:"",c:new Set(),loc:""};
+const S={step:-1,g:null,gt:"",a:{},n:new Set(),nt:"",c:new Set(),alc:""};
 const $=s=>document.querySelector(s);
-const lab=(l,id)=>l.find(x=>x.id===id).t.toLowerCase();
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const infer=(txt,map)=>Object.keys(map).filter(k=>map[k].test(txt));
-function opts(list,multi,key){return `<div class="opts">`+list.map(o=>{const on=multi?S[key].has(o.id):S[key]===o.id;return `<button class="opt" aria-pressed="${on}" data-id="${o.id}" data-k="${key}"><b>${o.t}</b><small>${o.d}</small></button>`}).join("")+`</div>`}
+const gname=id=>GROUPS.find(x=>x.id===id).t.toLowerCase();
+const nname=id=>NEEDS.find(x=>x.id===id).t.toLowerCase();
+const sel=(k,id)=>{const v=S.a[k];return v instanceof Set?v.has(id):v===id};
+function picked(){const out=[];(BR[S.g]||[]).forEach(q=>q.o.forEach(op=>{if(sel(q.k,op.id))out.push(op)}));return out}
+function tags(){const t=new Set(S.c);picked().forEach(op=>op.tags.forEach(x=>t.add(x)));return t}
+function groups(){const t=tags(),g=new Set(),m=GROUPS.find(x=>x.id===S.g).pg;if(m)g.add(m);[...t].filter(x=>x.startsWith("g:")).forEach(x=>g.add(x.slice(2)));
+ if(S.g==="otro"){Object.keys(GK).forEach(k=>GK[k].test(S.gt)&&g.add(k))}return g}
+function needsList(){const g=groups();if(!g.size)return NEEDS;return NEEDS.filter(n=>[...g].some(x=>(NH[x]||[]).includes(n.id)))}
+function btn(k,op,multi){return `<button class="opt" data-k="${k}" data-id="${op.id}" data-m="${multi?1:0}" aria-pressed="${sel(k,op.id)}">${op.t}${op.d?`<small>${op.d}</small>`:""}</button>`}
+function ready(){if(S.step===0)return S.g&&(S.g!=="otro"||S.gt.trim());
+ if(S.step===1)return (BR[S.g]||[]).every(q=>q.m||S.a[q.k]);
+ if(S.step===2)return S.n.size||S.nt.trim();return true}
 function render(){
- const a=$("#app");
- $("#track").style.display=S.step>=0&&S.step<3?"block":"none";
- $("#bar").style.width=((S.step+1)/3*100)+"%";
- $("#stepl").textContent=`Paso ${S.step+1} de 3`;
+ $("#track").style.display=S.step>=0&&S.step<4?"block":"none";
+ $("#bar").style.width=((S.step+1)/4*100)+"%";$("#stepl").textContent=`Paso ${S.step+1} de 4`;
+ const nav=(l="Siguiente")=>`<div class="nav"><button class="s" id="back">Atrás</button><button class="p" id="next" ${ready()?"":"disabled"}>${l}</button></div>`;
  let h="";
- if(S.step===-1)h=`<div class="card hero"><span class="badge">🔒 Tu privacidad primero</span><h1>Encuentra la ayuda de cuidados que mejor se ajusta a ti</h1><p class="lead">Responde unas preguntas y te orientamos hacia programas y lugares cercanos pensados para tu situación.</p>
- <div class="priv"><div><span>🛡️</span><p style="margin:0"><b>Tus datos están seguros</b>Lo que respondes se queda en tu dispositivo. Esta página no lo envía ni lo guarda en ningún servidor.</p></div>
- <div><span>🤐</span><p style="margin:0"><b>No se divulgan ni se comparten</b>Tus respuestas no se venden, publican ni se entregan a terceros.</p></div>
- <div><span>🤝</span><p style="margin:0"><b>Un solo propósito</b>Se usan únicamente para darte la mejor orientación de ayuda posible.</p></div></div>
+ if(S.step===-1)h=`<div class="card"><span class="badge">🔒 Tu privacidad primero</span><h1>Encuentra la ayuda de cuidados que mejor se ajusta a ti, en la CDMX</h1><p class="hint">Te haremos preguntas distintas según tu situación, para no pedirte datos que no vienen al caso.</p>
+ <div class="priv"><p>🛡️ <b>Tus datos están seguros.</b> Lo que respondes se queda en tu dispositivo; esta página no lo envía ni lo guarda en ningún servidor.</p><p>🤐 <b>No se divulgan ni se comparten</b> con terceros.</p><p>🤝 <b>Un solo propósito:</b> darte la mejor orientación de ayuda posible.</p></div>
  <button class="p" id="next">Entiendo, quiero continuar</button></div>`;
- else if(S.step===0)h=`<div class="card"><h2>¿Para quién buscas ayuda?</h2><p class="hint">Elige una opción. Si no ves tu caso, usa «Otro».</p>${opts(GROUPS,false,"g")}
- <div class="extra ${S.g==="otro"?"show":""}"><label class="f" for="gt">Describe a quién se cuida (edad, situación…)</label><textarea id="gt" placeholder="Ej.: mi hermano de 30 años que se recupera de una operación">${esc(S.gt)}</textarea></div>
- <div class="nav"><button class="s" id="back">Atrás</button><button class="p" id="next" ${S.g&&(S.g!=="otro"||S.gt.trim())?"":"disabled"}>Siguiente</button></div></div>`;
- else if(S.step===1)h=`<div class="card"><h2>¿Qué tipo de ayuda necesitas?</h2><p class="hint">Elige varias o escribe la tuya.</p>${opts(NEEDS,true,"n")}
- <label class="f" for="nt">¿Necesitas otra cosa? Escríbela (opcional)</label><textarea id="nt" placeholder="Ej.: transporte para llevarlo a terapia">${esc(S.nt)}</textarea>
- <div class="nav"><button class="s" id="back">Atrás</button><button class="p" id="next" ${S.n.size||S.nt.trim()?"":"disabled"}>Siguiente</button></div></div>`;
- else if(S.step===2)h=`<div class="card"><h2>¿Cuál es tu situación?</h2><p class="hint">Opcional. Ayuda a dar prioridad a quienes más lo necesitan.</p>${opts(CONDS,true,"c")}
- <label class="f" for="loc">¿Dónde estás? Colonia, municipio o estado (opcional, para buscar lugares cercanos)</label><input type="text" id="loc" value="${esc(S.loc)}" placeholder="Ej.: Iztapalapa, CDMX">
- <div class="nav"><button class="s" id="back">Atrás</button><button class="p" id="next">Ver mi orientación</button></div></div>`;
+ else if(S.step===0)h=`<div class="card"><h2>¿Para quién buscas ayuda?</h2><p class="hint">Elige la opción que mejor te describa. Según tu respuesta, cambiarán las preguntas.</p><div class="opts">${GROUPS.map(g=>btn("g",{id:g.id,t:g.t,d:g.d})).join("")}</div>
+ <div class="extra ${S.g==="otro"?"show":""}"><label class="f" for="gt">Describe a quién se cuida y su situación</label><textarea id="gt" placeholder="Ej.: mi hermano se recupera de una operación">${esc(S.gt)}</textarea></div>${nav()}</div>`;
+ else if(S.step===1){const qs=BR[S.g]||[];
+  h=`<div class="card"><h2>Cuéntanos más sobre: ${gname(S.g)}</h2><p class="hint">${qs.length?"Estas preguntas son solo para este grupo.":"Para tu caso no hacen falta más preguntas aquí."}</p>${qs.map(q=>`<div class="q"><h3>${q.q}</h3><div class="opts">${q.o.map(op=>btn(q.k,op,q.m)).join("")}</div></div>`).join("")}${nav()}</div>`}
+ else if(S.step===2)h=`<div class="card"><h2>¿Qué tipo de ayuda necesitas?</h2><p class="hint">Estas opciones corresponden a tu perfil. Elige varias o escribe la tuya.</p><div class="opts">${needsList().map(n=>btn("n",n,1)).join("")}</div>
+ <label class="f" for="nt">¿Algo más que necesites? (opcional)</label><textarea id="nt" placeholder="Ej.: transporte para llevarlo a terapia">${esc(S.nt)}</textarea>${nav()}</div>`;
+ else if(S.step===3)h=`<div class="card"><h2>Últimos datos</h2><p class="hint">Ayudan a dar prioridad a quienes más lo necesitan y a buscar cerca de ti.</p><div class="opts">${[{id:"sinss",t:"Sin seguridad social",d:"No tengo IMSS, ISSSTE u otro servicio por empleo"},{id:"bajo",t:"Ingresos bajos",d:"El ingreso del hogar no alcanza para los cuidados"}].map(c=>btn("c",c,1)).join("")}</div>
+ <label class="f" for="alc">¿En qué alcaldía vives? (opcional)</label><select id="alc"><option value="">Toda la Ciudad de México</option>${ALC.map(a=>`<option ${S.alc===a?"selected":""}>${a}</option>`).join("")}</select>${nav("Ver mi orientación")}</div>`;
  else h=results();
- a.innerHTML=`<div class="screen">${h}</div>`;
- bind();
-}
+ $("#app").innerHTML=`<div class="screen">${h}</div>`;bind()}
 function bind(){
  const nx=$("#next"),bk=$("#back");
  if(nx)nx.onclick=()=>{S.step++;render();scrollTo({top:0,behavior:"smooth"})};
  if(bk)bk.onclick=()=>{S.step--;render()};
- document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const k=b.dataset.k,id=b.dataset.id;
-  if(k==="g")S.g=id;else S[k].has(id)?S[k].delete(id):S[k].add(id);
-  const y=scrollY;render();scrollTo(0,y)});
- [["gt","gt"],["nt","nt"],["loc","loc"]].forEach(([id,k])=>{const e=$("#"+id);if(e)e.oninput=()=>{S[k]=e.value;const n=$("#next");if(n){if(S.step===0)n.disabled=!(S.g&&(S.g!=="otro"||S.gt.trim()));if(S.step===1)n.disabled=!(S.n.size||S.nt.trim())}}});
- const r=$("#reset");if(r)r.onclick=()=>{Object.assign(S,{step:0,g:null,gt:"",nt:"",loc:""});S.n.clear();S.c.clear();render()};
- const m=$("#mod");if(m)m.onclick=()=>{S.step=0;render()};
-}
-function maps(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q+" "+(S.loc.trim()||"cerca de mí"))}
-function card(r,i,alt){const p=r.p;return `<div class="card res ${alt?"alt":""}" style="--i:${i}">${alt?"":`<span class="score">${Math.min(r.pct,100)}%</span>`}<h3>${p.n}</h3><span class="tag">${p.o}</span><p style="margin:0">${p.x}</p>
- <p class="why">${r.mn.length?"Coincide en: "+r.mn.map(i=>lab(NEEDS,i)).join(", ")+".":"Opción general para tu grupo."}${r.mc.length?" Prioridad por: "+r.mc.map(i=>lab(CONDS,i)).join(", ")+".":""}</p>
- <div class="links"><a href="${maps(p.q)}" target="_blank" rel="noopener">📍 Ver lugares cercanos</a><a href="${p.u}" target="_blank" rel="noopener">Sitio oficial →</a></div></div>`}
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const k=b.dataset.k,id=b.dataset.id,y=scrollY;
+  if(k==="g"){if(S.g!==id){S.g=id;S.a={};S.n.clear()}}
+  else if(k==="n"||k==="c"){S[k].has(id)?S[k].delete(id):S[k].add(id)}
+  else if(b.dataset.m==="1"){if(!(S.a[k] instanceof Set))S.a[k]=new Set();S.a[k].has(id)?S.a[k].delete(id):S.a[k].add(id)}
+  else S.a[k]=id;
+  render();scrollTo(0,y)});
+ [["gt","gt"],["nt","nt"]].forEach(([i,k])=>{const e=$("#"+i);if(e)e.oninput=()=>{S[k]=e.value;const n=$("#next");if(n)n.disabled=!ready()}});
+ const al=$("#alc");if(al)al.onchange=()=>S.alc=al.value;
+ const r=$("#reset");if(r)r.onclick=()=>{Object.assign(S,{step:0,g:null,gt:"",a:{},nt:"",alc:""});S.n.clear();S.c.clear();render()};
+ const m=$("#mod");if(m)m.onclick=()=>{S.step=0;render()}}
+const maps=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q+" "+(S.alc||"")+" Ciudad de México");
+function card(r,i,alt){const p=r.p;return `<div class="card res ${alt?"alt":""}" style="--i:${i}">${alt?"":`<span class="score">${Math.min(r.pct,100)}%</span>`}<h3>${p.n}</h3><span class="chip">${p.o}</span><p style="margin:8px 0 0">${p.x}</p>
+ <p class="why">${r.mn.length?"Cubre: "+r.mn.map(nname).join(", ")+".":"Opción general para tu perfil."}${r.mc.length?" Prioridad por tu situación ("+r.mc.length+" coincidencia"+(r.mc.length>1?"s":"")+").":""}</p>
+ <div class="links"><a href="${maps(p.q)}" target="_blank" rel="noopener">📍 Lugares cercanos</a><a href="${p.u}" target="_blank" rel="noopener">Sitio oficial →</a></div></div>`}
 function results(){
- const ig=S.g==="otro"?infer(S.gt,GK):[S.g];
- const needs=new Set(S.n);infer(S.nt,NK).forEach(x=>needs.add(x));
- const conds=new Set(S.c);if(/cdmx|ciudad de m|iztapalapa|coyoac|tlalpan|gustavo a|azcapotzalco|xochimilco/i.test(S.loc))conds.add("cdmx");
- const grp=ig.length?ig:ALL;
- const scored=PROGS.filter(p=>p.g.some(g=>grp.includes(g))&&(!p.cdmx||conds.has("cdmx"))).map(p=>{
-  const mn=p.nd.filter(x=>needs.has(x)),mc=p.c.filter(x=>conds.has(x));
-  const sc=4+mn.length*3+mc.length*2,max=4+Math.min(p.nd.length,needs.size||1)*3+p.c.length*2;
-  return {p,mn,mc,sc,pct:Math.round(100*sc/max)}});
- const main=scored.filter(r=>r.mn.length).sort((a,b)=>b.sc-a.sc);
- const more=scored.filter(r=>!r.mn.length).sort((a,b)=>b.sc-a.sc).slice(0,main.length?3:5);
- let h=`<div class="card"><span class="badge">✨ Tu orientación</span><h2>Esto encontramos para ti</h2><p class="summary" style="margin:6px 0 0">Grupo: ${S.g==="otro"?(ig.length?ig.map(i=>lab(GROUPS,i)).join(", ")+" (interpretado de tu texto)":"sin grupo específico, mostramos opciones generales"):lab(GROUPS,S.g)}.<br>Ayuda: ${needs.size?[...needs].map(i=>lab(NEEDS,i)).join(", "):"—"}${S.nt.trim()?` · Tú escribiste: «${esc(S.nt.trim())}»`:""}</p></div>`;
- if(S.gt.trim()&&S.g==="otro"&&!ig.length)h+=`<div class="info">No pudimos ubicar tu caso en un grupo concreto, así que te mostramos las opciones más amplias. Un DIF municipal puede orientarte personalmente.</div>`;
- if(!main.length)h+=`<div class="info">No hay una coincidencia exacta con la ayuda que describes. Abajo verás otras opciones disponibles y una búsqueda abierta de lugares cercanos.</div>`;
- h+=main.map((r,i)=>card(r,i,false)).join("");
- if(more.length)h+=`<h3 class="sec">Otras opciones disponibles</h3>`+more.map((r,i)=>card(r,main.length+i,true)).join("");
- const free=(S.nt.trim()||S.gt.trim()||"ayuda para cuidados");
- h+=`<div class="card"><h3 class="sec" style="margin-top:0">¿Nada de esto encaja?</h3><p class="hint">Busca directamente en el mapa lo que escribiste, o lugares de asistencia social cercanos.</p><div class="links"><a href="${maps(free)}" target="_blank" rel="noopener">📍 Buscar «${esc(free.slice(0,40))}»</a><a href="${maps("DIF asistencia social")}" target="_blank" rel="noopener">📍 DIF cercano</a><a href="${maps("centro de salud")}" target="_blank" rel="noopener">📍 Centro de salud</a></div></div>`;
- h+=`<div class="nav"><button class="s" id="mod">Modificar respuestas</button><button class="p" id="reset">Empezar de nuevo</button></div>`;
- return h}
+ const t=tags(),g=groups(),needs=new Set(S.n);Object.keys(NK).forEach(k=>NK[k].test(S.nt)&&needs.add(k));
+ const hop=(BR[S.g]||[]).find(q=>q.k==="h"),hv=hop&&S.a.h?hop.o.find(x=>x.id===S.a.h):null,wk=hv?Math.round(hv.h*7):0;
+ const pool=PROGS.map(p=>{const mn=p.nd.filter(x=>needs.has(x)),mc=p.c.filter(x=>t.has(x));
+  const sc=4+mn.length*3+mc.length*2,mx=4+Math.min(p.nd.length,needs.size||1)*3+p.c.length*2;return {p,mn,mc,sc,pct:Math.round(100*sc/mx)}}).filter(r=>!g.size||r.p.g.some(x=>g.has(x)));
+ const main=pool.filter(r=>r.mn.length).sort((a,b)=>b.sc-a.sc),more=pool.filter(r=>!r.mn.length).sort((a,b)=>b.sc-a.sc).slice(0,main.length?2:4);
+ const used=new Set(),basket=[...needs].map(n=>{const r=main.find(r=>r.mn.includes(n));return r?[n,r.p.n]:null}).filter(Boolean);
+ const prof=[...g].map(x=>x==="cuidadora"?"persona cuidadora":x).concat(S.alc?[S.alc]:["Toda la CDMX"]);
+ let h=`<div class="card"><span class="badge">✨ Perfil de tu hogar</span><h2>Esto encontramos para ti</h2>${wk?`<p class="hint" style="margin:6px 0 0">Reportas unas <b>${wk} horas a la semana</b> de cuidado. Los servicios de cuidado diario y descanso ayudan a recuperar parte de ese tiempo.</p>`:""}<div class="prof">${prof.map(x=>`<span class="chip">${x}</span>`).join("")}${[...t].filter(x=>["unica","sinss","bajo","costo_op","carga"].includes(x)).map(x=>`<span class="chip">${{unica:"cuida sin apoyo",sinss:"sin seguridad social",bajo:"ingresos bajos",costo_op:"redujo su empleo",carga:"carga alta de cuidado"}[x]}</span>`).join("")}</div></div>`;
+ if(basket.length)h+=`<div class="card"><h3 class="sec" style="margin-top:0">Tu combinación de servicios</h3><p class="hint" style="margin:0">Un servicio por cada necesidad que marcaste.</p><div class="basket">${basket.map(([n,p])=>`<div><b>${nname(n)}</b><span>${p}</span></div>`).join("")}</div></div>`;
+ if(!main.length)h+=`<div class="info">No hay coincidencia exacta con lo que describes. Abajo verás otras opciones y una búsqueda abierta de lugares cercanos.</div>`;
+ h+=main.slice(0,6).map((r,i)=>card(r,i,false)).join("");
+ if(more.length)h+=`<h3 class="sec">Otras opciones disponibles</h3>`+more.map((r,i)=>card(r,i+main.length,true)).join("");
+ const free=S.nt.trim()||S.gt.trim()||"asistencia social";
+ h+=`<div class="card"><h3 class="sec" style="margin-top:0">¿Nada encaja?</h3><div class="links"><a href="${maps(free.slice(0,50))}" target="_blank" rel="noopener">📍 Buscar «${esc(free.slice(0,34))}»</a><a href="${maps("DIF")}" target="_blank" rel="noopener">📍 DIF cercano</a><a href="${maps("Manzana del Cuidado")}" target="_blank" rel="noopener">📍 Manzana del Cuidado</a></div></div>`;
+ return h+`<div class="nav"><button class="s" id="mod">Modificar respuestas</button><button class="p" id="reset">Empezar de nuevo</button></div>`}
 render();
 </script>
 </body>
